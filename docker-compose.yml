@@ -1,0 +1,19 @@
+services:
+  identidock: 
+    build: . 
+    expose: 
+      - "9090"
+    environment: 
+      ENV: PROD 
+    volumes: 
+      - ./app:/app
+    networks: 
+      - test
+  dnmonster:
+    image: amouat/dnmonster
+    networks: 
+      - test
+networks: 
+  test:
+    driver: bridge
+
