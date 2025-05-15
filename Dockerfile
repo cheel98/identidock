@@ -1,6 +1,5 @@
 FROM python 
 RUN groupadd -r uwsgi && useradd -r -g uwsgi uwsgi 
-RUN pip install --upgrade pip
 RUN pip install Flask
 RUN pip install uWSGI
 RUN pip install requests
